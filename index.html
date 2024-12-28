@@ -1,0 +1,1136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <title>Youtube Clone</title>
+  <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/591b93bf/img/logos/favicon_32x32.png" type="image/x-icon">
+
+  <!-- google icon  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Pacifico&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+
+</head>
+<body>
+
+    <style>
+
+        *{
+            font-family: "Roboto", sans-serif;
+        }
+
+
+        /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+    </style>
+
+
+        <div class="
+        h-screen 
+        w-screen 
+        grid 
+        overflow-hidden
+
+
+        grid-rows-[auto,1fr] 
+        md:grid-cols-[250px,1fr]
+        grid-cols-1
+
+
+        ">
+
+
+
+        <!-- topbar  -->
+            <div class="col-span-full">
+                <div class="flex justify-between items-center h-14  w-full">
+            
+            
+                    <!--  logo  -->
+                    <div class="flex items-center  space-x-3 mx-3 ">
+                        <div class="h-10 w-10 cursor-pointer transition duration-300 ease-in-out hover:bg-stone-200   rounded-full overflow-hidden flex items-center justify-center"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                        </div>
+        
+                        <div class="cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="yt-ringo2-svg_yt9" width="93" height="20" viewBox="0 0 93 20" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                <g>
+                                <path d="M14.4848 20C14.4848 20 23.5695 20 25.8229 19.4C27.0917 19.06 28.0459 18.08 28.3808 16.87C29 14.65 29 9.98 29 9.98C29 9.98 29 5.34 28.3808 3.14C28.0459 1.9 27.0917 0.94 25.8229 0.61C23.5695 0 14.4848 0 14.4848 0C14.4848 0 5.42037 0 3.17711 0.61C1.9286 0.94 0.954148 1.9 0.59888 3.14C0 5.34 0 9.98 0 9.98C0 9.98 0 14.65 0.59888 16.87C0.954148 18.08 1.9286 19.06 3.17711 19.4C5.42037 20 14.4848 20 14.4848 20Z" fill="#FF0033"></path>
+                                <path d="M19 10L11.5 5.75V14.25L19 10Z" fill="white"></path>
+                                </g>
+                                <g id="youtube-paths_yt9">
+                                <path d="M37.1384 18.8999V13.4399L40.6084 2.09994H38.0184L36.6984 7.24994C36.3984 8.42994 36.1284 9.65994 35.9284 10.7999H35.7684C35.6584 9.79994 35.3384 8.48994 35.0184 7.22994L33.7384 2.09994H31.1484L34.5684 13.4399V18.8999H37.1384Z"></path>
+                                <path d="M44.1003 6.29994C41.0703 6.29994 40.0303 8.04994 40.0303 11.8199V13.6099C40.0303 16.9899 40.6803 19.1099 44.0403 19.1099C47.3503 19.1099 48.0603 17.0899 48.0603 13.6099V11.8199C48.0603 8.44994 47.3803 6.29994 44.1003 6.29994ZM45.3903 14.7199C45.3903 16.3599 45.1003 17.3899 44.0503 17.3899C43.0203 17.3899 42.7303 16.3499 42.7303 14.7199V10.6799C42.7303 9.27994 42.9303 8.02994 44.0503 8.02994C45.2303 8.02994 45.3903 9.34994 45.3903 10.6799V14.7199Z"></path>
+                                <path d="M52.2713 19.0899C53.7313 19.0899 54.6413 18.4799 55.3913 17.3799H55.5013L55.6113 18.8999H57.6012V6.53994H54.9613V16.4699C54.6812 16.9599 54.0312 17.3199 53.4212 17.3199C52.6512 17.3199 52.4113 16.7099 52.4113 15.6899V6.53994H49.7812V15.8099C49.7812 17.8199 50.3613 19.0899 52.2713 19.0899Z"></path>
+                                <path d="M62.8261 18.8999V4.14994H65.8661V2.09994H57.1761V4.14994H60.2161V18.8999H62.8261Z"></path>
+                                <path d="M67.8728 19.0899C69.3328 19.0899 70.2428 18.4799 70.9928 17.3799H71.1028L71.2128 18.8999H73.2028V6.53994H70.5628V16.4699C70.2828 16.9599 69.6328 17.3199 69.0228 17.3199C68.2528 17.3199 68.0128 16.7099 68.0128 15.6899V6.53994H65.3828V15.8099C65.3828 17.8199 65.9628 19.0899 67.8728 19.0899Z"></path>
+                                <path d="M80.6744 6.26994C79.3944 6.26994 78.4744 6.82994 77.8644 7.73994H77.7344C77.8144 6.53994 77.8744 5.51994 77.8744 4.70994V1.43994H75.3244L75.3144 12.1799L75.3244 18.8999H77.5444L77.7344 17.6999H77.8044C78.3944 18.5099 79.3044 19.0199 80.5144 19.0199C82.5244 19.0199 83.3844 17.2899 83.3844 13.6099V11.6999C83.3844 8.25994 82.9944 6.26994 80.6744 6.26994ZM80.7644 13.6099C80.7644 15.9099 80.4244 17.2799 79.3544 17.2799C78.8544 17.2799 78.1644 17.0399 77.8544 16.5899V9.23994C78.1244 8.53994 78.7244 8.02994 79.3944 8.02994C80.4744 8.02994 80.7644 9.33994 80.7644 11.7299V13.6099Z"></path>
+                                <path d="M92.6517 11.4999C92.6517 8.51994 92.3517 6.30994 88.9217 6.30994C85.6917 6.30994 84.9717 8.45994 84.9717 11.6199V13.7899C84.9717 16.8699 85.6317 19.1099 88.8417 19.1099C91.3817 19.1099 92.6917 17.8399 92.5417 15.3799L90.2917 15.2599C90.2617 16.7799 89.9117 17.3999 88.9017 17.3999C87.6317 17.3999 87.5717 16.1899 87.5717 14.3899V13.5499H92.6517V11.4999ZM88.8617 7.96994C90.0817 7.96994 90.1717 9.11994 90.1717 11.0699V12.0799H87.5717V11.0699C87.5717 9.13994 87.6517 7.96994 88.8617 7.96994Z"></path>
+                                </g>
+                            </svg>
+        
+                        </div>
+        
+        
+        
+                        </div>
+        
+        
+        
+                    
+        
+                    <!-- center search  -->
+                    <div class="flex items-center w-1/3 ">
+                        <input class="text-[hsl(0,0%,6.7%)] rounded-s-full pl-3 h-10 overflow-hidden border focus:border-blue-500 border-gray-400 w-full outline-none " type="text" placeholder="Search">
+                        
+                        <div class="flex items-center h-10 rounded-e-full px-4 cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out border border-l-0 border-gray-400 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                        </div>
+        
+                        <!-- <div class="flex  items-center h-10 w-full  rounded-full overflow-hidden border-gray-400 ">
+                        </div> -->
+        
+                        <div class="ml-3">
+                            <div class="h-10 w-10 cursor-pointer transition duration-300 ease-in-out bg-stone-200 hover:bg-stone-300   rounded-full overflow-hidden flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333"><path d="M480-400q-50 0-85-35t-35-85v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q0 50-35 85t-85 35Zm0-240Zm-40 520v-123q-104-14-172-93t-68-184h80q0 83 58.5 141.5T480-320q83 0 141.5-58.5T680-520h80q0 105-68 184t-172 93v123h-80Zm40-360q17 0 28.5-11.5T520-520v-240q0-17-11.5-28.5T480-800q-17 0-28.5 11.5T440-760v240q0 17 11.5 28.5T480-480Z"/></svg>
+                            </div>
+                        </div>
+                        
+                    </div>
+        
+        
+        
+                    <!-- right menu  -->
+                    <div class="flex items-center space-x-3 mx-3">
+                        <div class="h-10 w-10 cursor-pointer transition duration-300 ease-in-out hover:bg-stone-200   rounded-full overflow-hidden flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333"><path d="M360-320h80v-120h120v-80H440v-120h-80v120H240v80h120v120ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h480q33 0 56.5 23.5T720-720v180l160-160v440L720-420v180q0 33-23.5 56.5T640-160H160Zm0-80h480v-480H160v480Zm0 0v-480 480Z"/></svg>
+                        </div>
+                        <div class="h-10 w-10 cursor-pointer transition duration-300 ease-in-out hover:bg-stone-200   rounded-full overflow-hidden flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>
+                        </div>
+                        <div class="h-8 w-8 ml-[10px] overflow-hidden cursor-pointer rounded-full">
+                            <img class="h-full w-full object-cover " src="https://yt3.ggpht.com/8nw_R-JmX0SosRJpI7lQXRcQKVsBJkroJwA_9LcWL3JDmCNLt_ZVt3VyMwY128mf7qroQi_FeA=s48-c-k-c0x00ffffff-no-rj" />
+                        </div>
+                    </div>
+        
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <!-- sidebar  -->
+            <div class="md:block hidden overflow-auto">
+
+                <div class="p-3">
+                    
+                    
+                    <div class="flex  w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <span class="material-icons">
+                            home
+                            </span>
+                        <span>Home</span>
+                    </div>
+
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><g><rect fill="none" height="24" width="24"/></g><g><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8 S16.41,20,12,20z M9.5,16.5l7-4.5l-7-4.5V16.5z"/></g></svg>
+                        <span>Shorts</span>
+                    </div>
+
+
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 6h16v2H4zm2-4h12v2H6zm14 8H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm0 10H4v-8h16v8zm-10-7.27v6.53L16 16z"/></svg>
+                        <span>Subscriptions</span>
+                    </div>
+
+
+                    <div class="border-b my-3"></div>
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <span class="font-bold">You</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"/></svg>
+                    </div>
+
+
+
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.25 2.52.77-1.28-3.52-2.09V8z"/></svg>
+                        <span>History</span>
+                    </div>
+
+
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><g><rect fill="none" height="24" width="24"/></g><g><g><rect height="2" width="11" x="3" y="10"/><rect height="2" width="11" x="3" y="6"/><rect height="2" width="7" x="3" y="14"/><polygon points="16,13 16,21 22,17"/></g></g></svg>
+                        <span>Playlist</span>
+                    </div>
+
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><g><rect fill="none" height="24" width="24" y="0"/></g><g><g><polygon points="9.5,7.5 9.5,16.5 16.5,12"/><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,18.01H4V5.99h16V18.01z"/></g></g></svg>
+                        <span>Your videos</span>
+                    </div>
+
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><g><rect fill="none" height="24" width="24" x="0"/></g><g><g><path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8 S16.41,20,12,20z M12.5,7H11v6l5.2,3.2l0.8-1.3l-4.5-2.7V7z"/></g></g></svg>
+                        <span>Watch later</span>
+                    </div>
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none"/><path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.58 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM9 9l4.34-4.34L12 10h9v2l-3 7H9V9zM1 9h4v12H1z"/></svg>
+                        <span>Liked vidoes</span>
+                    </div>
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1L9.64 7.64zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19 3l-6 6 2 2 7-7V3h-3z"/></svg>
+                        <span>Your clips</span>
+                    </div>
+
+
+
+
+                    <!-- Subscriptions  -->
+
+                    <div class="border-b my-3"></div>
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <span class="font-bold">Subscriptions</span>
+                    </div>
+
+
+
+                    <div class="flex justify-between w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <div class="h-8 w-8 rounded-full overflow-hidden">
+                            <img class="object-cover h-full w-full" src="https://yt3.ggpht.com/aqNdAvqqq69k4af_gfPdyw-UrP-K0sgXYpLPxpSLRA42bopt0iwUcMfdzYrsbaHZxWF5ld9cjA=s48-c-k-c0x00ffffff-no-rj" alt="">
+                        </div>
+                        <span>Kaisan Code</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="orangered"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 12c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm0-17C8.1 3 4.56 4.59 2 7.15l5 5c1.28-1.28 3.05-2.08 5-2.08s3.72.79 5 2.07l5-5C19.44 4.59 15.9 3 12 3zm4.84 6.47c-1.44-.91-3.1-1.4-4.84-1.4-1.74 0-3.41.49-4.85 1.41L4.94 7.26C6.99 5.79 9.44 5 12 5c2.56 0 5 .79 7.05 2.26l-2.21 2.21z"/></svg>
+                    </div>
+                    <div class="flex justify-between w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <div class="h-8 w-8 rounded-full overflow-hidden">
+                            <img class="object-cover h-full w-full" src="https://yt3.ggpht.com/aqNdAvqqq69k4af_gfPdyw-UrP-K0sgXYpLPxpSLRA42bopt0iwUcMfdzYrsbaHZxWF5ld9cjA=s48-c-k-c0x00ffffff-no-rj" alt="">
+                        </div>
+                        <span>Kaisan Code</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="orangered"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 12c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm0-17C8.1 3 4.56 4.59 2 7.15l5 5c1.28-1.28 3.05-2.08 5-2.08s3.72.79 5 2.07l5-5C19.44 4.59 15.9 3 12 3zm4.84 6.47c-1.44-.91-3.1-1.4-4.84-1.4-1.74 0-3.41.49-4.85 1.41L4.94 7.26C6.99 5.79 9.44 5 12 5c2.56 0 5 .79 7.05 2.26l-2.21 2.21z"/></svg>
+                    </div>
+                    <div class="flex justify-between w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <div class="h-8 w-8 rounded-full overflow-hidden">
+                            <img class="object-cover h-full w-full" src="https://yt3.ggpht.com/aqNdAvqqq69k4af_gfPdyw-UrP-K0sgXYpLPxpSLRA42bopt0iwUcMfdzYrsbaHZxWF5ld9cjA=s48-c-k-c0x00ffffff-no-rj" alt="">
+                        </div>
+                        <span>Kaisan Code</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="orangered"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 12c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm0-17C8.1 3 4.56 4.59 2 7.15l5 5c1.28-1.28 3.05-2.08 5-2.08s3.72.79 5 2.07l5-5C19.44 4.59 15.9 3 12 3zm4.84 6.47c-1.44-.91-3.1-1.4-4.84-1.4-1.74 0-3.41.49-4.85 1.41L4.94 7.26C6.99 5.79 9.44 5 12 5c2.56 0 5 .79 7.05 2.26l-2.21 2.21z"/></svg>
+                    </div>
+                    <div class="flex justify-between w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <div class="h-8 w-8 rounded-full overflow-hidden">
+                            <img class="object-cover h-full w-full" src="https://yt3.ggpht.com/aqNdAvqqq69k4af_gfPdyw-UrP-K0sgXYpLPxpSLRA42bopt0iwUcMfdzYrsbaHZxWF5ld9cjA=s48-c-k-c0x00ffffff-no-rj" alt="">
+                        </div>
+                        <span>Kaisan Code</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="orangered"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 12c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm0-17C8.1 3 4.56 4.59 2 7.15l5 5c1.28-1.28 3.05-2.08 5-2.08s3.72.79 5 2.07l5-5C19.44 4.59 15.9 3 12 3zm4.84 6.47c-1.44-.91-3.1-1.4-4.84-1.4-1.74 0-3.41.49-4.85 1.41L4.94 7.26C6.99 5.79 9.44 5 12 5c2.56 0 5 .79 7.05 2.26l-2.21 2.21z"/></svg>
+                    </div>
+                    <div class="flex justify-between w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <div class="h-8 w-8 rounded-full overflow-hidden">
+                            <img class="object-cover h-full w-full" src="https://yt3.ggpht.com/aqNdAvqqq69k4af_gfPdyw-UrP-K0sgXYpLPxpSLRA42bopt0iwUcMfdzYrsbaHZxWF5ld9cjA=s48-c-k-c0x00ffffff-no-rj" alt="">
+                        </div>
+                        <span>Kaisan Code</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="orangered"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 12c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm0-17C8.1 3 4.56 4.59 2 7.15l5 5c1.28-1.28 3.05-2.08 5-2.08s3.72.79 5 2.07l5-5C19.44 4.59 15.9 3 12 3zm4.84 6.47c-1.44-.91-3.1-1.4-4.84-1.4-1.74 0-3.41.49-4.85 1.41L4.94 7.26C6.99 5.79 9.44 5 12 5c2.56 0 5 .79 7.05 2.26l-2.21 2.21z"/></svg>
+                    </div>
+                    <div class="flex justify-between w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <div class="h-8 w-8 rounded-full overflow-hidden">
+                            <img class="object-cover h-full w-full" src="https://yt3.ggpht.com/aqNdAvqqq69k4af_gfPdyw-UrP-K0sgXYpLPxpSLRA42bopt0iwUcMfdzYrsbaHZxWF5ld9cjA=s48-c-k-c0x00ffffff-no-rj" alt="">
+                        </div>
+                        <span>Kaisan Code</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="orangered"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 12c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm0-17C8.1 3 4.56 4.59 2 7.15l5 5c1.28-1.28 3.05-2.08 5-2.08s3.72.79 5 2.07l5-5C19.44 4.59 15.9 3 12 3zm4.84 6.47c-1.44-.91-3.1-1.4-4.84-1.4-1.74 0-3.41.49-4.85 1.41L4.94 7.26C6.99 5.79 9.44 5 12 5c2.56 0 5 .79 7.05 2.26l-2.21 2.21z"/></svg>
+                    </div>
+
+
+                    <!-- Show more  -->
+
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+                        <span>Show more</span>
+                    </div>
+
+                    <div class="border-b my-3"></div>
+
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <span class="font-bold">Explore</span>
+                    </div>
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/></svg>
+                        <span>Tranding</span>
+                    </div>
+                   <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 3l.01 10.55c-.59-.34-1.27-.55-2-.55C7.79 13 6 14.79 6 17s1.79 4 4.01 4S14 19.21 14 17V7h4V3h-6zm-1.99 16c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+                        <span>Music</span>
+                    </div>
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><g><rect fill="none" height="24" width="24"/></g><g><g><path d="M21.58,16.09l-1.09-7.66C20.21,6.46,18.52,5,16.53,5H7.47C5.48,5,3.79,6.46,3.51,8.43l-1.09,7.66 C2.2,17.63,3.39,19,4.94,19h0c0.68,0,1.32-0.27,1.8-0.75L9,16h6l2.25,2.25c0.48,0.48,1.13,0.75,1.8,0.75h0 C20.61,19,21.8,17.63,21.58,16.09z M19.48,16.81C19.4,16.9,19.27,17,19.06,17c-0.15,0-0.29-0.06-0.39-0.16L15.83,14H8.17 l-2.84,2.84C5.23,16.94,5.09,17,4.94,17c-0.21,0-0.34-0.1-0.42-0.19c-0.08-0.09-0.16-0.23-0.13-0.44l1.09-7.66 C5.63,7.74,6.48,7,7.47,7h9.06c0.99,0,1.84,0.74,1.98,1.72l1.09,7.66C19.63,16.58,19.55,16.72,19.48,16.81z"/><polygon points="9,8 8,8 8,10 6,10 6,11 8,11 8,13 9,13 9,11 11,11 11,10 9,10"/><circle cx="17" cy="12" r="1"/><circle cx="15" cy="9" r="1"/></g></g></svg>
+                        <span>Gaming</span>
+                    </div>
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><rect fill="none" height="24" width="24"/><path d="M19,5h-2V3H7v2H5C3.9,5,3,5.9,3,7v1c0,2.55,1.92,4.63,4.39,4.94c0.63,1.5,1.98,2.63,3.61,2.96V19H7v2h10v-2h-4v-3.1 c1.63-0.33,2.98-1.46,3.61-2.96C19.08,12.63,21,10.55,21,8V7C21,5.9,20.1,5,19,5z M5,8V7h2v3.82C5.84,10.4,5,9.3,5,8z M12,14 c-1.65,0-3-1.35-3-3V5h6v6C15,12.65,13.65,14,12,14z M19,8c0,1.3-0.84,2.4-2,2.82V7h2V8z"/></svg>
+                        <span>Sports</span>
+                    </div>
+
+
+                    <div class="border-b my-3"></div>
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <span class="font-bold">More form YouTube</span>
+                    </div>
+
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <img class="h-[24px]" src="https://img.icons8.com/?size=48&id=19318&format=png" alt="">
+                        <span>YouTube Premium</span>
+                    </div>
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <img class="h-[24px]" src="https://img.icons8.com/?size=48&id=2MF6ryM9oRyF&format=png" alt="">
+                        <span>Youtube Studio</span>
+                    </div>
+
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <img class="h-[24px]" src="https://img.icons8.com/?size=48&id=6zadLh4Adjrp&format=png" alt="">
+                        <span>Youtube Music</span>
+                    </div>
+
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <img class="h-[24px]" src="https://img.icons8.com/?size=50&id=80495&format=png" alt="">
+                        <span>Youtube Kids</span>
+                    </div>
+
+
+
+
+
+                    <div class="border-b my-3"></div>
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.09-.16-.26-.25-.44-.25-.06 0-.12.01-.17.03l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.06-.02-.12-.03-.18-.03-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.09.16.26.25.44.25.06 0 .12-.01.17-.03l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+                        <span>Setting</span>
+                    </div>
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12.36 6l.4 2H18v6h-3.36l-.4-2H7V6h5.36M14 4H5v17h2v-7h5.6l.4 2h7V6h-5.6L14 4z"/></svg>
+                        <span>Report history</span>
+                    </div>
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/></svg>
+                        <span>Help</span>
+                    </div>
+
+                    <div class="flex w-full p-3 cursor-pointer rounded-xl hover:bg-gray-100 transition items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM11 5h2v6h-2zm0 8h2v2h-2z"/></svg>
+                        <span>Send feedback</span>
+                    </div>
+
+                    <div class="border-b my-3"></div>
+
+
+                    <div class="flex flex-wrap mb-3 text-[12px] space-x-2 spa justify-start cursor-pointer text-gray-500 font-semibold">
+                        <span class="ml-2">About</span>
+                        <span>Press</span>
+                        <span>Copyright</span>
+                        <span>Contact us </span>
+                        <span>Creators</span>
+                        <span>Advertise</span>
+                        <span>Developers</span>
+                    </div>
+
+
+                    <div class="flex flex-wrap mb-3 text-[12px] space-x-2 spa justify-start cursor-pointer text-gray-500 font-semibold">
+                        <span class="ml-2">Terms</span>
+                        <span>Privacy</span>
+                        <span>Policy & Safety</span>
+                        <span>How YouTube works</span>
+                        <span>Test new features</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">&copy; 2024 Google LLC</p>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="grid grid-rows-[auto,1fr] overflow-hidden">
+
+
+                <!-- filter -->
+                <div>
+                    <div class="w-full flex p-3 flex-wrap line-clamp-1 space-x-3 space-y-3 mx-3 text-sm ">
+                        <span class="font-medium transition hover:bg-gray-700 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-900 text-white">All</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">Music</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">React routers</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">Astird S</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">Mixes</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">Orbits</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">Podcast </span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">Media theories</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">CSS</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">Live</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">Data Structures</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">Inventions</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">K-Pop</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">Comedy</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">Recently uploaded</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">Watched</span>
+                        <span class="font-medium transition hover:bg-gray-300 duration-300 px-3 py-2 rounded-md cursor-pointer bg-gray-200 text-black">New to you</span>
+                </div>
+
+                </div>
+
+
+
+
+                <!-- content wrapper  -->
+                <div class="overflow-auto">
+                    <div class="w-full h-full flex flex-wrap justify-center overflow-auto py-5">
+
+                        <!-- card  -->
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[350px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            <img class="rounded-2xl" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            
+                            <div class="flex justify-between py-3">
+    
+                                <div class="h-10 w-10 rounded-full overflow-hidden">
+                                    <img class="h-full w-full object-cover" src="https://yt3.ggpht.com/JnXkKCQH0-ZD8CtL1hSH6eyz64jaE4jYOb69spc7RXoSvP7jj3MOW8n127BvT6X3hhhrOp4mDA=s48-c-k-c0x00ffffff-no-rj" alt="can't load">
+                                </div>
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+                                        <div>Dhruv Rathee </div>
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                            <div class="h-1 w-1 mx-1 rounded-full bg-gray-500"></div> 
+                                            <span>
+                                                1 month ago
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+
+
+
+
+    
+    
+                    </div>
+    
+
+
+
+                    <!-- short wrapper  -->
+                    <div class=" hidden w-full flex-wrap justify-center">
+
+
+
+                        <div class="w-[230px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            
+                            <div class="h-[350px] w-full bg-red-400">
+                                <img class="rounded-2xl h-full object-cover" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            </div>
+                            
+
+                            <div class="flex justify-between py-3">
+    
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[230px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            
+                            <div class="h-[350px] w-full bg-red-400">
+                                <img class="rounded-2xl h-full object-cover" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            </div>
+                            
+
+                            <div class="flex justify-between py-3">
+    
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[230px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            
+                            <div class="h-[350px] w-full bg-red-400">
+                                <img class="rounded-2xl h-full object-cover" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            </div>
+                            
+
+                            <div class="flex justify-between py-3">
+    
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[230px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            
+                            <div class="h-[350px] w-full bg-red-400">
+                                <img class="rounded-2xl h-full object-cover" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            </div>
+                            
+
+                            <div class="flex justify-between py-3">
+    
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[230px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            
+                            <div class="h-[350px] w-full bg-red-400">
+                                <img class="rounded-2xl h-full object-cover" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            </div>
+                            
+
+                            <div class="flex justify-between py-3">
+    
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="w-[230px] h-max bg-white m-5 rounded-2xl overflow-hidden cursor-pointer">
+                            
+                            <div class="h-[350px] w-full bg-red-400">
+                                <img class="rounded-2xl h-full object-cover" src="https://i.ytimg.com/vi/UMqNHi1GDAE/maxresdefault.jpg" alt="can't load">
+                            </div>
+                            
+
+                            <div class="flex justify-between py-3">
+    
+    
+                                <div class=" w-[77%] ">
+                                    <h2 class="line-clamp-2 font-medium">Why I Am Going to Siloguri? | Kuch Sach Batana I'm just writting random text</h2>
+                                    
+                                    <div class="text-sm text-gray-600">
+    
+                                        <div class="flex items-center w-full">
+                                            <span>
+                                                12M views 
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg>
+                                </div>
+                            </div>
+    
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+ 
+
+
+
+
+
+
+
+
+</body>
+</html>
